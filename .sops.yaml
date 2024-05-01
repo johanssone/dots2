@@ -1,0 +1,20 @@
+keys:
+  # Users
+  - &users:
+    - &ekan 0x67997126867BA84A
+  # Hosts
+  - &hosts:
+    - &hodgepodge age1pq9lp3nat7x2wvuv27u85fgcrq2hfq4l4awp5yfxu3gpphtu03lqhq476p
+creation_rules:
+  - path_regex: users/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *hodgepodge
+      pgp:
+      - *ekan
+  - path_regex: hosts/hodgepodge/secrets/.*
+    key_groups:
+    - age:
+      - *hodgepodge
+      pgp:
+      - *ekan
