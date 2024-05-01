@@ -71,20 +71,6 @@
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
-        hodgepodge3 = lib.nixosSystem { # Laptop Added 2024-05-01 
-          modules = [ ./hosts/hodgepodge3 ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        hodgepodge2 = lib.nixosSystem { # Laptop Added 2024-05-01 
-          modules = [ ./hosts/hodgepodge2 ];
-          specialArgs = { inherit inputs outputs; };
-        };
-
-        hodgepodge = lib.nixosSystem { # Workstation
-          modules = [ ./hosts/hodgepodge ];
-          specialArgs = { inherit inputs outputs; };
-        };
       };
     };
 }
